@@ -140,7 +140,7 @@ input[type="checkbox"]#toggle-switch:checked ~ .toggle-fill::after {
 
 .banks {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 }
 
