@@ -115,7 +115,8 @@ input[type="checkbox"]#toggle-switch {
 }
 
 .toggle-fill::after {
-  content: "";
+  content: "on";
+  text-transform: uppercase;
   position: absolute;
   font-size: 0.5rem;
   font-weight: bold;
@@ -135,6 +136,9 @@ input[type="checkbox"]#toggle-switch {
 }
 
 input[type="checkbox"]#toggle-switch:checked ~ .toggle-fill::after {
+  content: "off";
+  text-transform: uppercase;
+  background-color: rgba(255, 69, 0, 0.5);
   transform: translateX(var(--height));
 }
 
