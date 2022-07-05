@@ -1,5 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
+import bankSelectorReducer from "../features/BankSelector/BankSelectorSlice";
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    bank: bankSelectorReducer,
+  },
 });

@@ -1,12 +1,12 @@
-import ToggleSwitch from "./ToggleSwitch";
-import MessageScreen from "./MessageScreen";
-import BankSelector from "./BankSelector";
-import Volume from "./Volume";
+import PowerSwitch from "../features/PowerSwitch/PowerSwitch";
+import MessageScreen from "../features/MessageScreen/MessageScreen";
+import BankSelector from "../features/BankSelector/BankSelector";
+import Volume from "../features/Volume/Volume";
 
 const Controls = () => {
   return (
     <section id="display">
-      <ToggleSwitch text="Power" />
+      <PowerSwitch text="Power" />
       <MessageScreen />
       <Volume />
       <BankSelector />

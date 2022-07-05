@@ -1,4 +1,4 @@
-const ToggleSwitch = ({ text, setBank, setMessage }) => {
+const PowerSwitch = ({ text, setBank, setMessage }) => {
   return (
     <label className="toggle-switch">
       <input
@@ -17,4 +17,4 @@ const ToggleSwitch = ({ text, setBank, setMessage }) => {
   );
 };
 
-export default ToggleSwitch;
+export default PowerSwitch;
