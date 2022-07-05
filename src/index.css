@@ -137,3 +137,32 @@ input[type="checkbox"]#toggle-switch {
 input[type="checkbox"]#toggle-switch:checked ~ .toggle-fill::after {
   transform: translateX(var(--height));
 }
+
+.banks {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.banks > label > input {
+  display: none;
+}
+
+.banks > label > input:checked ~ .bank {
+  background-color: orangered;
+}
+
+.bank {
+  flex-grow: 1;
+  display: grid;
+  place-content: center;
+  width: 4rem;
+  border-radius: 2px;
+  background-color: rgba(200, 0, 0, 0.25);
+}
+
+.bank-title {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
