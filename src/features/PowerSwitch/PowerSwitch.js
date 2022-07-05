@@ -1,17 +1,19 @@
-const PowerSwitch = ({ text, setBank, setMessage }) => {
+import { useSelector, useDispatch } from "react-redux";
+import { flipPower } from "./PowerSwitchSlice";
+
+const PowerSwitch = () => {
+  const power = useSelector((state) => state.powerswitch.power);
+  const dispatch = useDispatch();
+
   return (
     <label className="toggle-switch">
       <input
         type="checkbox"
         id="toggle-switch"
-        onChange={() => {
-          setBank((prev) => {
-            setMessage(prev ? "Bank 2" : "Bank 1");
-            return !prev;
-          });
-        }}
+        checked={power}
+        onChange={() => dispatch(flipPower())}
       />
-      <p className="toggle-text">{text}</p>
+      <p className="toggle-text">power</p>
       <div className="toggle-fill"></div>
     </label>
   );

@@ -8,13 +8,11 @@ export const bankSelectorSlice = createSlice({
   name: "bank",
   initialState,
   reducers: {
-    toggleBank: (state) => {
-      if (state.name === "Bank 1") state.name = "Bank 2";
-      else if (state.name === "Bank 2") state.name = "Bank 1";
-      else throw new Error();
+    setCurrentBank: (state, action) => {
+      state.name = action.payload;
     },
   },
 });
 
-export const { toggleBank } = bankSelectorSlice.actions;
+export const { setCurrentBank } = bankSelectorSlice.actions;
 export default bankSelectorSlice.reducer;

@@ -1,9 +1,14 @@
-const KeyPad = ({ bank, setMessage }) => {
-  const playSound = (key, name) => {
+import soundData from "../soundData";
+import { useSelector } from "react-redux";
+
+const KeyPad = () => {
+  const currentBank = useSelector((state) => state.bank.name);
+  const bank = soundData[currentBank].data;
+
+  const playSound = (key) => {
     const audio = document.getElementById(key);
     audio.currentTime = 0;
     audio.play();
-    setMessage(name);
   };
 
   return (

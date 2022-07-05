@@ -6,7 +6,7 @@ import Volume from "../features/Volume/Volume";
 const Controls = () => {
   return (
     <section id="display">
-      <PowerSwitch text="Power" />
+      <PowerSwitch />
       <MessageScreen />
       <Volume />
       <BankSelector />
