@@ -2,11 +2,11 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 function MessageScreen() {
-  const currentBank = useSelector((state) => state.bank.name);
+  const message = useSelector((state) => state.message.message);
 
   return (
     <div className="message-screen">
-      <p className="message">{currentBank}</p>
+      <p className="message">{message}</p>
     </div>
   );
 }

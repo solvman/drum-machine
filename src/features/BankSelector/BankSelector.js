@@ -1,6 +1,8 @@
 import React from "react";
+import soundData from "../../soundData";
 import { useSelector, useDispatch } from "react-redux";
 import { setCurrentBank } from "./BankSelectorSlice";
+import { setMessage } from "../MessageScreen/MessageScreenSlice";
 
 function BankSelector() {
   const currentBank = useSelector((state) => state.bank.name);
@@ -18,7 +20,10 @@ function BankSelector() {
         ></input>
         <div
           className="bank"
-          onClick={() => dispatch(setCurrentBank("Bank 1"))}
+          onClick={() => {
+            dispatch(setCurrentBank("Bank 1"));
+            dispatch(setMessage(soundData["Bank 1"].name));
+          }}
         >
           <p className="bank-title">Bank 1</p>
         </div>
@@ -33,7 +38,10 @@ function BankSelector() {
         ></input>
         <div
           className="bank"
-          onClick={() => dispatch(setCurrentBank("Bank 2"))}
+          onClick={() => {
+            dispatch(setCurrentBank("Bank 2"));
+            dispatch(setMessage(soundData["Bank 2"].name));
+          }}
         >
           <p className="bank-title">Bank 2</p>
         </div>
